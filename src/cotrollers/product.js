@@ -3,9 +3,9 @@ import joi from 'joi'
 
 
 const productSchame = joi.object({
-    name: joi.string().required(),
+    name: joi.string().min(3).max(50).required(),
     price: joi.number().required(),
-    desc: joi.string().required(),
+    desc: joi.string().min(3).max(1000).required(),
     status: joi.boolean().required(),
 })
 
